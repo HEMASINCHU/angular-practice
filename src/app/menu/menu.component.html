@@ -1,0 +1,11 @@
+<div>
+    <button *ngFor="let button of buttons" [class.selected]="button.selected" (click)="selectButton(button)" >
+      {{ button.text }}
+    </button>
+  </div>
+  <!-- <input type="text" [(ngModel)]="searchTerm" placeholder="Search"> -->
+<h1 *ngFor="let student of  filterData(students)">{{student.name}},{{student.address}}</h1>
+
+
+
+ 

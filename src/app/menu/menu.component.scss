@@ -1,0 +1,13 @@
+button {
+    padding: 10px;
+    margin: 15px;
+    font-size: 16px;
+    background-color:pink;
+    border-radius: 20px;
+  }
+  
+  button.selected {
+    transform: scale(1.1);
+    font-weight: bold;
+    background-color:green;
+  }

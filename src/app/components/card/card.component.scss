@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .card p {
+    margin: 10px;
+    font-weight: 700;
+  }
+  button {
+    background-color: rgb(20, 175, 175);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .card img {
+    height:auto;
+    width:200px;
+    margin:10px;
+  }
+  
