@@ -8,6 +8,7 @@ import { MenuComponent } from './menu/menu.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { CardComponent } from './components/card/card.component';
+import {  HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CardComponent } from './components/card/card.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
     
   ],
   providers: [],

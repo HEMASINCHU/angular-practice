@@ -6,9 +6,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./pagination.component.scss'],
 })
 export class PaginationComponent {
-  @Input() page: any = 1;
 
-  @Input() totalRecords: any;
+
+  pageSize = 5;
+  @Input() page: any = 1;
+  @Input() totalRecords:number =0;
   @Output() onPageChange = new EventEmitter<number>();
 
   addNewItem(value: number) {}
@@ -17,16 +19,16 @@ export class PaginationComponent {
     console.log(this.page);
   }
 
-  currentPage = 0;
-
+  currentPage = 1;
+  disabled =true;
   clickleft() {
-    if (this.currentPage > 0) {
+    if (this.currentPage >= 1) {
       this.currentPage--;
       this.onPageChange.emit(this.currentPage);
     }
   }
   clickright() {
-    if (this.currentPage < this.totalRecords - 1) {
+    if (this.currentPage <= (this.totalRecords/this.pageSize) ) {
       this.currentPage++;
       this.onPageChange.emit(this.currentPage);
     }
