@@ -1,0 +1,23 @@
+.menu-bar {
+  display:inline-flex;
+  flex-direction:column;
+  justify-content: flex-start;
+  margin:5px 15px;
+  gap:20px;
+  padding:10px;
+  font-size: 20px;
+  font-style: 18px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  text-decoration: none;
+  color: #333;
+  gap:30px;
+ 
+  
+}
+
+

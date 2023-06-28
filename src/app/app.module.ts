@@ -5,10 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { MenuComponent } from './menu/menu.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { CardComponent } from './components/card/card.component';
 import {  HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './header/header.component';
+import { MenubarComponent } from './menubar/menubar.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +19,16 @@ import {  HttpClientModule } from '@angular/common/http';
     PaginationComponent,
     MenuComponent,
     HomeComponent,
-    CardComponent
+    CardComponent,
+    HeaderComponent,
+    MenubarComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
     
   ],
