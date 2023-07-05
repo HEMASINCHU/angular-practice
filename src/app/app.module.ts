@@ -12,6 +12,9 @@ import {  HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { MenubarComponent } from './menubar/menubar.component';
 import { ButtonComponent } from './button/button.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import { ButtonComponent } from './button/button.component';
     CardComponent,
     HeaderComponent,
     MenubarComponent,
-    ButtonComponent
+    ButtonComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
