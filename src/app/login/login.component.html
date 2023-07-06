@@ -5,22 +5,22 @@
       <label for="email">Email</label>
       <input type="email" id="email" formControlName="email" />
       <div
-        *ngIf="email.invalid && (email.dirty || email.touched)"
+        *ngIf="email?.invalid && (email?.dirty || email?.touched)"
         class="error"
       >
-        <div *ngIf="email.errors['required']">Email is required.</div>
-        <div *ngIf="email.errors['email']">Invalid email format.</div>
+        <div *ngIf="email?.errors?.['required']">Email is required.</div>
+        <div *ngIf="email?.errors?.['email']">Invalid email format.</div>
       </div>
     </div>
     <div>
       <label for="password">Password</label>
       <input type="password" id="password" formControlName="password" />
       <div
-        *ngIf="password.invalid && (password.dirty || password.touched)"
+        *ngIf="password?.invalid && (password?.dirty || password?.touched)"
         class="error"
       >
-        <div *ngIf="password.errors['required']">Password is required.</div>
-        <div *ngIf="password.errors['minlength']">
+        <div *ngIf="password?.errors?.['required']">Password is required.</div>
+        <div *ngIf="password?.errors?.['minlength']">
           Password must be at least 6 characters long.
         </div>
       </div>

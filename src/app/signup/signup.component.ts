@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class SignupComponent implements OnInit{
  
  
-  signupForm: FormGroup;
+  signupForm!: FormGroup;
   submitted = false;
 
   constructor(private formBuilder: FormBuilder, private router:Router) { }
