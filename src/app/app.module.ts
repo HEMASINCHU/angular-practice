@@ -26,16 +26,16 @@ import { SignupComponent } from './signup/signup.component';
     HeaderComponent,
     MenubarComponent,
     ButtonComponent,
-    LoginComponent,
-    SignupComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    LoginComponent,
+    SignupComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

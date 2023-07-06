@@ -1,16 +1,21 @@
+import { CommonModule } from '@angular/common';
 import { Component,OnInit} from '@angular/core';
-import { FormBuilder, FormGroup, Validators,FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators,FormControl, ReactiveFormsModule } from '@angular/forms';
 
 import { Router } from '@angular/router';
 
 
 @Component({
+  standalone:true,
+  imports: [CommonModule,ReactiveFormsModule],
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
+
+  constructor(private router:Router){}
 
   ngOnInit() {
     this.loginForm = new FormGroup({
@@ -32,12 +37,10 @@ export class LoginComponent implements OnInit {
       // Perform login logic here
       console.log(this.loginForm.value);
     }
+
   }
- 
-
-  
-  
- 
-
+  navigateToHome(){
+    this.router.navigate(['/home'])
+  }
   
 }
