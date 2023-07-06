@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,26 +7,42 @@ import { Router } from '@angular/router';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.scss']
 })
-export class SignupComponent {
-  firstName: string='';
-  lastName: string = '';
-  email: string = '';
-  phoneNumber: string = '';
-  gender: string = '';
-  dob: string = '';
-  password: string = '';
-  constructor(private router: Router) { }
+export class SignupComponent implements OnInit{
+ 
+ 
+  signupForm: FormGroup;
+  submitted = false;
 
-  onSubmit() {
+  constructor(private formBuilder: FormBuilder, private router:Router) { }
+
+  ngOnInit(): void {
+    this.signupForm = this.formBuilder.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
+      phone: ['', Validators.required],
+      gender: ['', Validators.required],
+      dob: ['', Validators.required]
+    });
+  }
+
+  onSubmit(): void {
+    this.submitted = true;
     
-    console.log('Form submitted');
-    console.log(this.firstName, this.lastName, this.email, this.phoneNumber, this.gender, this.dob, this.password);
-  }
+   
+    if (this.signupForm.invalid) {
+      return;
+    }
+
+    console.log(this.signupForm.value);
+  } 
+
   navigateToLogin(){
-    this.router.navigate(['/login']);
+    console.log("routing works")
+    this.router.navigate(['/login'])
+    
   }
-
-
-
+ 
 }
  

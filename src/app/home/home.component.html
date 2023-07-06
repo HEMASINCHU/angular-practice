@@ -1,5 +1,21 @@
-<!-- <h1 *ngFor="let card of  cardpageResults">{{card.author}},{{card.id}}</h1> -->
+<app-header />
 <div class="container">
-    <app-card *ngFor="let card of pageResult " [author]="card?.author" [download_url]="card?.download_url"/>
+  <div class="left-side">
+    <app-menubar />
+  </div>
+  <div class="right-side">
+    <!-- <h1 *ngFor="let card of  cardpageResults">{{card.author}},{{card.id}}</h1> -->
+    <div class="container1">
+      <app-card
+        *ngFor="let card of pageResult"
+        [author]="card?.author"
+        [download_url]="card?.download_url"
+      />
+    </div>
+  </div>
 </div>
-<app-pagination  [page]="currentPage" (onPageChange)="addItem($event)" [totalRecords] = "cards.length" />
+<app-pagination
+  [page]="currentPage"
+  (onPageChange)="addItem($event)"
+  [totalRecords]="cards.length"
+/>
