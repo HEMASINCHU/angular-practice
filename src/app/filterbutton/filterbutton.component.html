@@ -1,0 +1,9 @@
+<div class="filter-button">
+  <button
+    *ngFor="let filter of filterButtons"
+    [ngClass]="{ selected: selectedFilter.id === filter.id }"
+    (click)="onSelect(filter)"
+  >
+    {{ filter.label }}
+  </button>
+</div>
