@@ -1,5 +1,5 @@
 <app-header />
-<app-filterbutton (selectedEvent)="onFilterSelect($event)"/>
+<app-filterbutton (selectedEvent)="onFilterSelect($event)" />
 
 <div class="container">
   <div class="left-side">
@@ -13,6 +13,7 @@
         [author]="card?.author"
         [download_url]="card?.download_url"
       />
+      <div *ngIf="pageResult.length === 0">No Result found</div>
     </div>
   </div>
 </div>

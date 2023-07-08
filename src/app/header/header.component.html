@@ -7,8 +7,15 @@
     youtube
   </div>
   <div class="youtube-search">
-    <input type="text" placeholder="Search.." name="search" />
-    <button type="submit"><i class="bi bi-search"></i></button>
+    <input
+      type="text"
+      placeholder="Search.."
+      name="search"
+      [(ngModel)]="searchText"
+    />
+    <button type="submit" (click)="onSearch()">
+      <i class="bi bi-search"></i>
+    </button>
   </div>
   <div class="youtube-notification">
     <i class="bi bi-bell"></i>
@@ -20,4 +27,3 @@
     <button routerLink="/signup">Signup</button>
   </div>
 </div>
-
